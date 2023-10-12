@@ -1,0 +1,20 @@
+name: ds-kickstarter
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python
+  - anaconda
+  - pip
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+  - jupyter
+  - scikit-learn
+  - python-dotenv
+  - psycopg2-binary
+  - SQLAlchemy
+  - missingno
+  - Pillow
+  - xgboost
