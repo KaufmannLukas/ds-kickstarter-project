@@ -9,3 +9,22 @@ In this dataset, we have collected information on a large number of Kickstarter 
 By analyzing this dataset, researchers and analysts can gain insights into the characteristics of successful and unsuccessful Kickstarter projects, such as funding targets, project categories, and funding sources. This information can be used to inform investment decisions and guide future crowdfunding campaigns.
 
 Overall, this dataset provides a comprehensive look at the Kickstarter ecosystem and can serve as a valuable resource for anyone interested in understanding the dynamics of crowdfunding and the factors that contribute to project success or failure.
+
+
+## Setup Environment
+
+setup first time:
+``` bash
+conda env create -f environment.yml
+```
+
+activate the environment
+```bash
+conda activate ds-kickstarter
+```
+
+update the environment:
+``` bash
+conda env update --file environment.yml --prune
+```
+
