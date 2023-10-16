@@ -13,7 +13,7 @@ sub_categorys = {cat: list(df.query(f"Category == '{cat}'").Subcategory.unique()
 
 
 # load model
-with open("models/decision_tree_3.pkl", "rb") as file:
+with open("models/decision_tree_4.pkl", "rb") as file:
     model = pickle.load(file)
 
 
@@ -129,23 +129,24 @@ if __name__ == "__main__":
     with open("parameters.pkl", "rb") as file:
         parameters = pickle.load(file)
 
-    #parameters = get_parameters()
-
     # with open("parameters.pkl", "wb") as file:
     #     pickle.dump(parameters, file)
 
-
-
-
     parameters = {
-        'Name_length': 58,
-        'Country': 'United States',
-        'Combined_category': 'Design - Product Design',
-        'Goal': 1000000,
-        'Backers': 62642,
-        'Month': 7,
-        'Duration_days': 52
+        'Name_length': 14,
+        'Country': 'Germany',
+        'Combined_category': 'Games - Playing Cards',
+        'Goal': 10000,
+        'Backers': 0,
+        'Month': 10,
+        'Duration_days': 30
     }
+    
+    
+    
+    parameters = get_parameters()
+
+
 
     # dummy_df = pd.DataFrame(dummy_parameters, index=[0])
     print("-"*60)
@@ -160,10 +161,18 @@ if __name__ == "__main__":
     print("")
 
     backers = [
+        5,
         10,
+        25,
         50,
+        75,
         100,
+        125,
+        150,
+        175,
         200,
+        250,
+        300,
         500,
         1000,
         10000,
@@ -177,11 +186,6 @@ if __name__ == "__main__":
     
     user_df = pd.DataFrame(l)
 
-    
-
-    # user_df = pd.DataFrame(parameters, index=[0])
-
-
     predictions = model.predict(user_df)
 
     print(f"You can expect:")
@@ -192,10 +196,13 @@ if __name__ == "__main__":
     reached = False
     for backer, prediction in zip(backers, list(predictions)):
         if parameters["Goal"] < prediction and not reached:
-            print("-" * width)
+            print('-'*width)
             reached = True
+            goal_reached_at = backer
         print(f"|{backer:>10} | {prediction:>15.2f}$ |")
     print("-" * width)
+
+    print(f"You need at least {goal_reached_at} backers for your project ;)")
 
 
 
