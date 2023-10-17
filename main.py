@@ -204,6 +204,7 @@ if __name__ == "__main__":
 
     print(f"You need at least {goal_reached_at} backers for your project ;)")
 
+    print("")
 
 
 
