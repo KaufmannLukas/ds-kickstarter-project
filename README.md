@@ -144,3 +144,5 @@ You need at least 125 backers for your project ;)
 ```
 
 The final output will make predictions for the calculated 'Pledged' values based on different numbers of backers.
+
+The example of Intimacy card was actually a startup campaign running on kickstarter platform. The final outcome from the kickstarter was 11264$ and 208 numbers of backers. Our model predicted if the backers number is 200 then the predicted goal will be 13302.41$
