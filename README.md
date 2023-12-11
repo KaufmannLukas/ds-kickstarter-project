@@ -145,4 +145,4 @@ You need at least 125 backers for your project ;)
 
 The final output will make predictions for the calculated 'Pledged' values based on different numbers of backers.
 
-The input example of Intimacy Cards was actually a live kickstarter campaign running on the platform. Looking back after it finished, this kickstarter project collected 11264 $ from 208 backers. Our model predicted that the project would need at least 125 backers to succeed, and if the number of backers is 200, the predicted outcome was 13302.41 $.
+The input example of Intimacy Cards was actually a live kickstarter campaign running on the platform. Looking back after it finished in November 2023, this kickstarter project collected 11264 $ from 208 backers. Our model predicted in October 2023, that the project would need at least 125 backers to succeed, and if the number of backers is 200, the predicted outcome was 13302.41 $.
